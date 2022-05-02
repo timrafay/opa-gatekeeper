@@ -1,8 +1,8 @@
 apiVersion: opa.k8smgmt.io/v3
-kind: OPAConstraint
+kind: OPAConstraintTemplate
 metadata:
   labels:
-    rafay.dev/opa: constraint
+    rafay.dev/opa: template
   name: allowed-repos
   project: defaultproject
 spec:
@@ -12,4 +12,4 @@ spec:
       - name: file://artifacts/test/allowed-repos.yaml
     options: {}
     type: Yaml
-  templateName: allowed-repos
+
