@@ -1,0 +1,81 @@
+rctl create opaconstrainttemplate -f allow-privilege-escalation-container-constraint-template.yaml
+rctl create opaconstrainttemplate -f allowed-users-constraint-template.yaml                       
+rctl create opaconstrainttemplate -f app-armor-constraint-template.yaml                           
+rctl create opaconstrainttemplate -f flex-volumes-constraint-template.yaml                        
+rctl create opaconstrainttemplate -f forbidden-sysctls-constraint-template.yaml                   
+rctl create opaconstrainttemplate -f host-filesystem-constraint-template.yaml                     
+rctl create opaconstrainttemplate -f host-namespace-constraint-template.yaml                      
+rctl create opaconstrainttemplate -f host-network-ports-constraint-template.yaml               
+rctl create opaconstrainttemplate -f linux-capabilities-constraint-template.yaml                  
+rctl create opaconstrainttemplate -f privileged-container-constraint-template.yaml                
+rctl create opaconstrainttemplate -f proc-mount-constraint-template.yaml                                                                     
+rctl create opaconstrainttemplate -f read-only-root-filesystem-constraint-template.yaml           
+rctl create opaconstrainttemplate -f se-linux-constraint-template.yaml                            
+rctl create opaconstrainttemplate -f seccomp-constraint-template.yaml                             
+rctl create opaconstrainttemplate -f volume-types-constraint-template.yaml  
+
+
+
+rctl create opaconstraint -f allow-privilege-escalation-container-constraint.yaml
+rctl create opaconstraint -f allowed-users-constraint.yaml                       
+rctl create opaconstraint -f app-armor-constraint.yaml                           
+rctl create opaconstraint -f flex-volumes-constraint.yaml                        
+rctl create opaconstraint -f forbidden-sysctls-constraint.yaml                   
+rctl create opaconstraint -f host-filesystem-constraint.yaml                     
+rctl create opaconstraint -f host-namespace-constraint.yaml                      
+rctl create opaconstraint -f host-network-ports-constraint.yaml               
+rctl create opaconstraint -f linux-capabilities-constraint.yaml                  
+rctl create opaconstraint -f privileged-container-constraint.yaml                
+rctl create opaconstraint -f proc-mount-constraint.yaml                          
+rctl create opaconstraint -f read-only-root-filesystem-constraint.yaml           
+rctl create opaconstraint -f se-linux-constraint.yaml                            
+rctl create opaconstraint -f seccomp-constraint.yaml                             
+rctl create opaconstraint -f volume-types-constraint.yaml    
+
+
+rctl create opapolicy -f psp-restricted-policy.yaml
+
+
+
+#######################################################################
+
+rctl create opaconstrainttemplate -f container-limits-constraint-template.yaml
+rctl create opaconstrainttemplate -f container-resource-ratios-constraint-template.yaml
+
+rctl create opaconstraint -f container-limits-constraint.yaml
+rctl create opaconstraint -f container-resource-ratios-constraint.yaml
+
+rctl create opapolicy -f operational-efficiency-policy.yaml
+
+
+#######################################################################
+
+rctl create opaconstrainttemplate -f disallowed-tags-constraint-template.yaml
+rctl create opaconstrainttemplate -f replica-limits-constraint-template.yaml
+rctl create opaconstrainttemplate -f required-annotations-constraint-template.yaml
+rctl create opaconstrainttemplate -f required-labels-constraint-template.yaml
+rctl create opaconstrainttemplate -f required-probes-constraint-template.yaml
+
+rctl create opaconstraint -f disallowed-tags-constraint.yaml
+rctl create opaconstraint -f replica-limits-constraint.yaml
+rctl create opaconstraint -f required-annotations-constraint.yaml
+rctl create opaconstraint -f required-labels-constraint.yaml
+rctl create opaconstraint -f required-probes-constraint.yaml
+
+rctl create opapolicy -f reliability-policy.yaml
+
+
+#######################################################################
+
+
+rctl create opaconstrainttemplate -f allowed-repos-constraint-template.yaml
+rctl create opaconstrainttemplate -f block-nodeport-services-constraint-template.yaml
+rctl create opaconstrainttemplate -f https-only-constraint-template.yaml
+rctl create opaconstrainttemplate -f image-digests-constraint-template.yaml
+
+rctl create opaconstraint -f allowed-repos-constraint.yaml
+rctl create opaconstraint -f block-nodeport-services-constraint.yaml
+rctl create opaconstraint -f https-only-constraint.yaml
+rctl create opaconstraint -f image-digests-constraint.yaml
+
+rctl create opapolicy -f security-policy.yaml
