@@ -1,14 +1,13 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sAllowedRepos
+kind: Seccomp
 metadata:
-  name: repo-is-openpolicyagent
+  name: seccomp
 spec:
   match:
     kinds:
       - apiGroups: [""]
         kinds: ["Pod"]
-    namespaces:
-      - "default"
   parameters:
-    repos:
-      - "openpolicyagent/"
+    allowedProfiles:
+    - runtime/default
+    - docker/default

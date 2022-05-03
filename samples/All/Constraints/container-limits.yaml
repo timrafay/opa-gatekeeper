@@ -1,14 +1,12 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sAllowedRepos
+kind: K8sContainerLimits
 metadata:
-  name: repo-is-openpolicyagent
+  name: container-must-have-limits
 spec:
   match:
     kinds:
       - apiGroups: [""]
         kinds: ["Pod"]
-    namespaces:
-      - "default"
   parameters:
-    repos:
-      - "openpolicyagent/"
+    cpu: "200m"
+    memory: "1Gi"
