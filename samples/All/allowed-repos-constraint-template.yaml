@@ -9,7 +9,7 @@ spec:
   artifact:
     artifact:
       paths:
-      - name: file://allowed-repos.yaml
+      - name: file://artifacts/test/allowed-repos.yaml
     options: {}
     type: Yaml
 
