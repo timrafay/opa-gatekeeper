@@ -15,4 +15,4 @@ spec:
   namespace: nginx
   placement:
     selector: rafay.dev/clusterName=opa-testing
-  version: nginx-v1
+  version: nginx-v2
