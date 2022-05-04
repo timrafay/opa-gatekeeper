@@ -5,10 +5,13 @@ metadata:
   project: defaultproject
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      paths:
+      - name: file://artifacts/nginx2/nginx2.yaml
     options: {}
     type: Yaml
   drift:
     enabled: false
   namespace: nginx
-  placement: {}
+  placement:
+    selector: rafay.dev/clusterName=opa-testing
