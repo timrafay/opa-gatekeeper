@@ -18,4 +18,4 @@ spec:
   placement: {}
   sharing:
     enabled: false
-  version: v3
+  version: v4
