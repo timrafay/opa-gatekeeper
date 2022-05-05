@@ -1,0 +1,14 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: nginx
+  project: defaultproject
+spec:
+  artifact:
+    artifact: {}
+    options: {}
+    type: Yaml
+  drift:
+    enabled: false
+  namespace: nginx
+  placement: {}
