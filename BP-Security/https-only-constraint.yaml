@@ -1,0 +1,15 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAConstraint
+metadata:
+  labels:
+    rafay.dev/opa: constraint
+  name: https-only
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://constraints/https-only.yaml
+    options: {}
+    type: Yaml
+  templateName: https-only

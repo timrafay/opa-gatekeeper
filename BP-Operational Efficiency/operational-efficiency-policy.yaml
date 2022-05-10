@@ -1,0 +1,29 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAPolicy
+metadata:
+  name: operational-efficiency
+  project: defaultproject
+spec:
+  constraintList:
+  - name: container-limits
+  - name: container-resource-ratios    
+  excludedNamespaces:  
+  - namespaces:
+    - name: namespace-1
+    processes:
+    - '*'
+  installationParams:
+    auditFromCache: false
+    auditInterval: 60
+    auditMatchKindOnly: false
+    constraintViolationsLimit: 20
+    enableDeleteOperations: false
+  sharing:
+    enabled: true
+    projects:
+    - name: defaultproject
+  syncObjects:
+  - group: extentions
+    kind: Pod
+    version: v1
+  version: v1

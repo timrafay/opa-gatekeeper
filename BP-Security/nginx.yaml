@@ -1,0 +1,6 @@
+name: nginx
+namespace: nginx
+project: defaultproject
+type: NativeYaml
+clusters: opa-testing
+payload: ./nginx.yaml
