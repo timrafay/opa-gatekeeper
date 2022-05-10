@@ -29,4 +29,3 @@ spec:
     kind: Pod
     version: v1
   version: v1
-  #
