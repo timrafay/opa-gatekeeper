@@ -12,5 +12,4 @@ spec:
       - name: file://constrainttemplates/container-limits.yaml
     options: {}
     type: Yaml
-    #
 
