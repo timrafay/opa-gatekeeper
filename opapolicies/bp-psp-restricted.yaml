@@ -1,7 +1,7 @@
 apiVersion: opa.k8smgmt.io/v3
 kind: OPAPolicy
 metadata:
-  name: psp-restricted-custom
+  name: bp-psp-restricted
   project: defaultproject
 spec:
   constraintList:
